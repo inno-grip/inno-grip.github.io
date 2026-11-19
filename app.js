@@ -1,6 +1,7 @@
 // Add or edit the same translation keys in both language objects to localize interface text.
 const translations = {
   en: {
+    projectTitleFull: "Smart Small-Part Gripper Utilizing Photogrammetry and AI Models in Automated Assembly",
     toggleNavigation: "Toggle navigation",
     home: "Home",
     see: "See",
@@ -12,12 +13,19 @@ const translations = {
     papers: "Papers",
     code: "Code",
     about: "About",
-    problem: "Project overview",
-    homeParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed felis vitae justo varius tincidunt. This page is a starting point for introducing the INNO-GRIP project and its research.",
-    methods: "Methods and project work",
-    methodsParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explore the project sections to learn about perception, planning, grasping and integration.",
+    homeParagraph: "Welcome to the homepage of the INNO-GRIP research project!",
+    problem: "Problem",
+    problemParagraph: "Although small industrial parts are very heterogeneous, humans are able to handle these objects using two or three fingers. Robots, on the other hand, tend to be less flexible and require retooling. Especially in low-mix high-volume production, there is a strong demand, due to high investment costs and significant adaptation effort in handling technology, for flexible, quickly reconfigurable, and programmable automation solutions for small parts handling. At the same time, recent developments in artificial intelligence and robotics are opening up new potential for small parts handling.",
+    objective: "Objective",
+    objectiveParagraph: 'The goal of the INNO-GRIP project is to develop an adaptable robotic gripping system for small parts provided in bulk. First, the workspace scene is captured by two simple webcams and 3D geometry is reconstructed using VGGT-Omega (section <a href="#/see/results">See</a>). Separate objects are segmented and detected in the resulting 3D point clouds using DBSCAN. Grasp poses are determined using GraspGen (section <a href="#/plan">Plan</a>). Special grippers with soft pad materials enable flexible gripping with minimal retooling effort (section <a href="#/grasp">Grasp</a>).',
+    approach: "Approach",
+    approachParagraph: "At the beginning of the project, an intelligent 3D perception system is designed. In parallel, small parts are systematically analyzed and abstracted with respect to their properties so that the designed grippers support as many parts as possible. The performance of the designed grippers is tested. State-of-the-art grasp point detection algorithms are tested and fine-tuned where necessary. Finally, the developed partial results are integrated into a software and hardware demonstrator, and the integrated system is tested experimentally.",
     overviewTitle: "See · Overview",
-    overviewParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. This page will introduce the perception work and the data collected for the project.",
+    overviewParagraph1: "In the beginning we used a Nikon D780 camera mounted on an orbit rig to capture 360-degree videos of the scenes:",
+    overviewParagraph2: "Then, we applied MVSAnywhere for AI-assisted photogrammetry, which took around 10 minutes per scene on our NVIDIA RTX PRO 6000 Blackwell GPU. Although reconstruction quality was really high, computational effort of this method was prohibitively high for industrial applications.",
+    overviewParagraph3: "In 2026, we started experimenting with state-of-the-art transformer models for 3D reconstruction (MV-DUST3R+, Depth Anything 3, VGGT-Omega). The camera setup was simplified and now has only two simple Logitech C920 webcams that can be placed flexibly, as long as four ArUco markers are visible in both images:",
+    overviewParagraph4: 'The results using this simple and cost-effective setup with DA3 and VGGT-Omega AI models can be inspected under <a href="#/see/results">Results browser</a>. To evaluate 3D reconstructions of transformer models, we obtained ground truth measurements with a Keyence LJ-S160 snapshot laser scanner. Here is an example point cloud provided by the sensor:',
+    overviewParagraph5: 'More technical details, data and code related to our experiments can be found under <a href="#/papers">Papers</a> and <a href="#/code">Code</a>.',
     arrangementIntro: "We have tested different arrangement complexities - select one to inspect the results:",
     single: "Single",
     multiple: "Multiple",
@@ -43,6 +51,7 @@ const translations = {
     notFound: "Page not found"
   },
   de: {
+    projectTitleFull: "Intelligenter Kleinteilegreifer unter Verwendung von Photogrammetrie und KI-Modellen in der automatisierten Montage",
     toggleNavigation: "Navigation umschalten",
     home: "Home",
     see: "Sehen",
@@ -54,12 +63,19 @@ const translations = {
     papers: "Publikationen",
     code: "Code",
     about: "Über uns",
-    problem: "Projektüberblick",
-    homeParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed felis vitae justo varius tincidunt. Diese Seite ist ein Ausgangspunkt, um das Projekt INNO-GRIP und seine Forschung vorzustellen.",
-    methods: "Methoden und Projektarbeit",
-    methodsParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Entdecken Sie die Projektbereiche zu Wahrnehmung, Planung, Greifen und Integration.",
+    homeParagraph: "Willkommen auf der Homepage des Forschungsprojekts INNO-GRIP!",
+    problem: "Problem",
+    problemParagraph: "Trotz großer Vielfalt von industriellen Kleinteilen sind Menschen in der Lage, diese Objekte mit zwei oder drei Fingern zu handhaben. Im Gegensatz dazu sind Roboter weniger flexibel und müssen für unterschiedliche Bauteile umgerüstet werden. Insbesondere bei kleinen und mittleren Produktionsserien besteht viel Bedarf an flexiblen, schnell anpassbaren Automatisierungslösungen für die Handhabung von kleinen Bauteilen. Gleichzeitig eröffnen die aktuellen Innovationen in den Bereichen KI und Robotik neue Potenziale für diese industrielle Problemstellung.",
+    objective: "Ziel",
+    objectiveParagraph: 'Das Ziel von INNO-GRIP ist die Entwicklung eines anpassungsfähigen robotischen Greifsystems für ungeordnet liegende Kleinteile. Zuerst soll der Arbeitsbereich mit zwei einfachen Webcams aufgenommen werden, damit 3D-Geometrie durch VGGT-Omega rekonstruiert werden kann (Abschnitt <a href="#/see/results">Sehen</a>). Einzelne Objekte sollen in den rekonstruierten Punktwolken mithilfe von DBSCAN segmentiert und detektiert werden. Greifposen sollen durch GraspGen bestimmt werden (Abschnitt <a href="#/plan">Planen</a>). Spezielle Greifer mit nachgiebigen Aufnahmeflächen sollen flexibles Greifen mit minimalem Rüstaufwand ermöglichen (Abschnitt <a href="#/grasp">Greifen</a>).',
+    approach: "Vorgehensweise",
+    approachParagraph: "Am Anfang des Projekts wird ein intelligentes 3D-Wahrnehmungssystem umgesetzt. Parallel dazu werden industrielle Kleinteile systematisch analysiert und ihre Eigenschaften abstrahiert, sodass die entwickelten Greifer so viele Bauteile wie möglich unterstützen. Die Prozessstabilität des Greifens mit den neuartigen Designs wird gemessen. Darüber hinaus werden KI-Greifalgorithmen aus dem aktuellen Stand der Technik getestet und bei Bedarf nachtrainiert. Zum Abschluss werden die einzelnen Funktionsmodule in einem Demonstrator zusammengeführt und das integrierte System experimentell untersucht.",
     overviewTitle: "Sehen · Überblick",
-    overviewParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diese Seite wird die Wahrnehmungsarbeit und die für das Projekt erhobenen Daten vorstellen.",
+    overviewParagraph1: "Am Anfang haben wir eine im Kreis verfahrbare Nikon D780 Spiegelreflexkamera verwendet, um 360-Grad Videos der Objekte aufzunehmen:",
+    overviewParagraph2: "Dann haben wir MVSAnywhere für die KI-gestützte Photogrammetrie eingesetzt, was auf unserer NVIDIA RTX PRO 6000 Blackwell GPU ca. 10 Minuten Rechenzeit pro Szene in Anspruch genommen hat. Obwohl die Qualität der Rekonstruktion sehr hoch war, fiel die erfordlerliche Rechendauer und -leistung für einen industriellen Einsatz zu hoch aus.",
+    overviewParagraph3: "In 2026 haben wir angefangen, mit state-of-the-art Transformermodellen für 3D-Rekonstruktion zu experimentieren (MV-DUST3R+, Depth Anything 3, VGGT-Omega). Der Kameraaufbau wurde vereinfacht und hat jetzt nur noch zwei übliche Logitech C920 Webkameras, die flexibel positioniert werden können, solange vier ArUco-Marker in beiden Bildern sichtbar sind:",
+    overviewParagraph4: 'Die Ergebnisse, die wir mit diesem einfachen System und zwei KI-Modellen (DA3, VGGT-Omega) erzielt haben, können unter <a href="#/see/results">Sehen - Ergebnisbrowser</a> im Detail angeschaut werden. Um die Güte der KI-generierten 3D-Rekonstruktionen zu bewerten, haben wir den Keyence LJ-S160 Snapshot Laserscanner als Quelle von Referenzmessungen genommen. Hier ist ein Beispiel der von ihm erzeugten Punktwolke:',
+    overviewParagraph5: 'Mehr technische Details, Datensätze und Quellcode aus unseren Experimenten findet man unter den Abschnitten <a href="#/papers">Publikationen</a> und <a href="#/code">Code</a>.',
     arrangementIntro: "Wir haben verschiedene Komplexitäten der Anordnung getestet – wählen Sie eine aus, um die Ergebnisse anzusehen:",
     single: "Einzelteil",
     multiple: "Mehrere",
@@ -121,13 +137,17 @@ function renderHero(title, subtitle = "", eyebrow = "") {
 function renderHome() {
   renderHero(
     "INNO-GRIP",
-    "Intelligenter Kleinteilegreifer unter Verwendung von Photogrammetrie und KI-Modellen in der automatisierten Montage"
+    text("projectTitleFull")
   );
   pageContent.innerHTML = `
     <article class="article-copy">
       <p>${text("homeParagraph")}</p>
       <h2>${text("problem")}</h2>
-      <p>${text("methodsParagraph")}</p>
+      <p>${text("problemParagraph")}</p>
+      <h2>${text("objective")}</h2>
+      <p>${text("objectiveParagraph")}</p>
+      <h2>${text("approach")}</h2>
+      <p>${text("approachParagraph")}</p>
       <img class="home-photo" src="imgs/web/260212_4.jpeg" alt="Robotic assembly research in the INNO-GRIP laboratory" loading="lazy">
     </article>
   `;
@@ -135,7 +155,18 @@ function renderHome() {
 
 function renderOverview() {
   renderHero(text("overviewTitle"), "", text("see"));
-  pageContent.innerHTML = `<article class="article-copy"><p>${text("overviewParagraph")}</p></article>`;
+  pageContent.innerHTML = `
+    <article class="article-copy">
+      <p>${text("overviewParagraph1")}</p>
+      <img class="home-photo" src="imgs/web/nikon-orbit-rig.jpg" alt="Nikon D780 and orbit rig" loading="lazy">
+      <p>${text("overviewParagraph2")}</p>
+      <img class="home-photo" src="imgs/web/mvsanywhere.png" alt="MVSAnywhere reconstruction" loading="lazy">
+      <p>${text("overviewParagraph3")}</p>
+      <img class="home-photo" src="imgs/web/inno-grip-ieee-ra-p-paper-setup-crop.jpeg" alt="Simple camera setup" loading="lazy">
+      <p>${text("overviewParagraph4")}</p>
+      <img class="home-photo" src="imgs/web/keyence-pc.png" alt="Example Keyence point cloud" loading="lazy">
+      <p>${text("overviewParagraph5")}</p>
+    </article>`;
 }
 
 function renderPlaceholderPage(route) {
